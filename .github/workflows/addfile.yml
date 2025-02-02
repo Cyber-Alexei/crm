@@ -18,6 +18,7 @@ jobs:
           echo "New file" > newfile.txt
           git add newfile.txt
           git commit -m "newfile added"
+          git pull origin main --rebase
           git push origin main
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
